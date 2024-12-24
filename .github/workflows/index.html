@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elevance Health RO Monitoring Report</h1>
+    </header>
+	
+	<section>
+        <h2>Report Details</h2>
+		<p><strong>Environment Name : </strong>Richmond</p>
+		<p><strong>Environment Health : </strong> <span style="color: white; background-color: green; padding: 2px 5px; border-radius: 3px;">Green</span></p>
+        <p><strong>Report Date / Time :</strong>  24-Dec-2024 / 15:00:03 </p>
+	
+    </section>
+
+	
+    
+    <section>
+        <h2>Database Details</h2>
+		<p><strong>DB Health : </strong><span style="color: white; background-color: red; padding: 2px 5px; border-radius: 3px;">Green</span></p>
+		<p><strong>DB Type : </strong> Maria DB</p>
+        <p><strong>DB Version : </strong> mysql Ver 15.1 Distrib 10.5.24-MariaDB, for Linux (x86_64) using readline 5.1</p>
+		
+    </section>
+
+    <section>
+        <table>
+            <tr>
+                <th>Backup Name</th>
+                <th>Backup Size</th>
+                <th>Backup Date</th>
+            </tr>
+            <tr>
+                <td>PanacesMetadata20241220000140.sql</td>
+                <td>1.99 GB</td>
+                <td>2024-12-20 00:04:37</td>
+            </tr>
+            <tr>
+                <td>PanacesMetadata20241217000006.sql.gz</td>
+                <td>1.99 GB</td>
+                <td>2024-12-17 00:03:21</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+		<h2>RO Server Details</h2>
+		 <table>
+            <tr>
+				<th>RO Health</th>
+                <th>Server Name</th>
+                <th>IP</th>
+                <th>RO Service</th>
+                <th>Agent Status</th>
+                <th>RO UI</th>
+				<th>Uptime</th>
+				<th>/</th>
+				<th>/opt</th>
+				<th>/var</th>
+				<th>/backup</th>
+            </tr>
+            <tr>
+				<td><span style="color: white; background-color: red; padding: 2px 5px; border-radius: 3px;">Green</span></td>
+                <td>v33crohass.wellpoint.com</td>
+                <td>30.117.175.15</td>
+                <td>OK</td>
+                <td>Active</td>
+                <td>Accessible</td>
+				<td>120 Days</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+            </tr>
+			</table>
+    </section>
+
+    <section>
+        <h2>Site Controller Details</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Site</th>
+                <th>IP</th>
+                <th>OS</th>
+                <th>SC Service</th>
+				<th>Agent Service</th>
+				<th>Component</th>
+				<th>Uptime</th>
+				<th>/</th>
+				<th>/opt</th>
+				<th>/var</th>
+				<th>/backup</th>
+            </tr>
+            <tr>
+                <td>HSB_LNX_Site_Controller</td>
+                <td>Harrisonburg</td>
+                <td>30.117.175.16</td>
+                <td>Linux</td>
+                <td>OK</td>
+				<td>OK</td>
+				<td>Active</td>
+				<td>67 Days</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+				<td>12.2G-28%</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFF00">HSB_WIN_Site_Controller</td>
+                <td>Harrisonburg</td>
+                <td>30.117.175.16</td>
+                <td>Windows</td>
+                <td>OK</td>
+				<td>OK</td>
+				<td>Active</td>
+				<td>67 Days</td>
+				<td>12.2G-28%</td>
+				<td>N/A</td>
+				<td>N/A</td>
+				<td>N/A</td>
+            </tr>
+			
+        </table>
+    </section>
+
+    <section>
+        <h2>Management Service Details</h2>
+        <table>
+            <tr>
+                <th>Service Name</th>
+				<th>Service Type</th>
+                <th>Site</th>
+                <th>IP</th>
+                <th>Agent Status</th>
+				<th>Service Status</th>
+				<th>SiteController</th>
+				
+            </tr>
+            <tr>
+                <td>Richmond_HBG_Vcenter_1</td>
+				<td>Vcenter</td>
+                <td>Harrisonburg</td>
+                <td>30.117.44.179</td>
+                <td>ACTIVE</td>
+				<td>OK</td>
+				<td>HSB_LNX_Site_Controller</td>
+            </tr>
+            <tr>
+                <td>Richmond_HBG_Vcenter_2</td>
+                <td>Harrisonburg</td>
+                <td>30.117.44.96</td>
+                <td>ACTIVE</td>
+            </tr>
+            <tr>
+                <td>Richmond_HBG_Vcenter_3</td>
+                <td>Harrisonburg</td>
+                <td>30.117.108.11</td>
+                <td>ACTIVE</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>VM Clone and Snapshot Details</h2>
+        <table>
+            <tr>
+                <th>Server</th>
+                <th>Clone Name</th>
+                <th>Created On</th>
+                <th>Snapshot Exist</th>
+            </tr>
+            <tr>
+                <td>linuxSC</td>
+                <td>Clone-Dec13-va33pavcro301_LNX_SC.wellpoint.com</td>
+                <td>12/13/2024 4:16:05</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>roServer</td>
+                <td>Clone-Dec13-va33pavcro300_RO.wellpoint.com</td>
+                <td>12/13/2024 3:15:06</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>winSC</td>
+                <td>Clone-Dec13-va33pavcro304_Win_SC.wellpoint.com</td>
+                <td>12/13/2024 4:16:55</td>
+                <td>No</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>User Status</h2>
+        <p><strong>User Name:</strong> srcroadmin</p>
+        <p><strong>Account Active: </strong><span style="color: white; background-color: red; padding: 2px 5px; border-radius: 3px;"> Yes </span></p>
+		<p><strong>Last Checked On:</strong> Wed 12/25/2024  2:21:07.88</p>
+    </section>
+</body>
+</html>
